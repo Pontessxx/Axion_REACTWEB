@@ -1,8 +1,11 @@
 import React from 'react'
+import '@/styles/NotFound.scss'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <div>
+        <h1>404 - Página Não Encontrada</h1>
+    </div>
   )
 }
 
