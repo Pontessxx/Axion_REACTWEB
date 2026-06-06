@@ -1,0 +1,112 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 70px;
+  height: 100vh;
+
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+
+  overflow: hidden;
+  transition: width 0.3s ease;
+
+  box-shadow: var(--shadow);
+
+  z-index: 1000;
+
+  &:hover {
+    width: 240px;
+  }
+
+  &__logo {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+
+    img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+
+        transition: all 0.3s ease;
+    }
+  }
+    &:hover {
+        .sidebar__logo img {
+            width: 120px;
+            height: auto;
+        }
+    }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0.25rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0.9rem 1.3rem;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+
+    svg {
+      min-width: 22px;
+      font-size: 1.2rem;
+    }
+
+    span {
+      opacity: 0;
+      white-space: nowrap;
+
+      transition: opacity 0.2s ease;
+
+      color: var(--text);
+    }
+
+    &:hover {
+      background: var(--accent-bg);
+      color: var(--accent);
+
+      span {
+        color: var(--accent);
+      }
+    }
+
+    &.active {
+      background: var(--accent-bg);
+      color: var(--accent);
+
+      border-right: 3px solid var(--accent);
+
+      span {
+        color: var(--accent);
+        font-weight: 600;
+      }
+    }
+  }
+
+  &:hover {
+    .sidebar__item span {
+      opacity: 1;
+    }
+  }
+}
