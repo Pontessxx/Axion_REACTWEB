@@ -1,0 +1,135 @@
+// ─── ROOT ───────────────────────────────────────────
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 1fr auto;
+  background: var(--bg);
+}
+
+// ─── SIDEBAR SPACER ─────────────────────────────────
+// A sidebar é fixed (fora do fluxo), então precisamos
+// de um placeholder na col 1 pra reservar o espaço
+.sidebar-spacer {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  width: 70px;
+}
+
+// ─── CONTENT ────────────────────────────────────────
+.layout__content {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 2rem;
+  background: var(--bg);
+  transition: padding 0.3s ease;
+  min-width: 0; // evita overflow no grid
+
+  @media (max-width: 1024px) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+// ─── FOOTER ─────────────────────────────────────────
+.footer {
+  grid-column: 2 / -1; // começa na col 2, respeita a sidebar
+  grid-row: 2;
+
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: var(--shadow);
+
+  &__container {
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__brand {
+    h3 {
+      color: var(--text-h);
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 12px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      border: 1px solid transparent;
+      transition: all 0.25s ease;
+
+      svg {
+        font-size: 1.1rem;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        border-color: var(--accent-border);
+        box-shadow: 0 0 15px var(--accent-bg);
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
