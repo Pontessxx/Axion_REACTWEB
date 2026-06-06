@@ -1,73 +1,157 @@
-# React + TypeScript + Vite
+# Comandos Úteis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Instalação das Dependências
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Executar Projeto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+```
+
+---
+
+## Gerar Build de Produção
+
+```bash
+npm run build
+```
+
+---
+
+## Visualizar Build Localmente
+
+```bash
+npm run preview
+```
+
+---
+
+## Executar ESLint
+
+```bash
+npm run lint
+```
+
+---
+
+# Comandos Git
+
+## Atualizar Branch Atual
+
+```bash
+git pull origin main
+```
+
+---
+
+## Criar Nova Branch
+
+```bash
+git checkout -b feature/nome-da-feature
+```
+
+ou
+
+```bash
+git switch -c feature/nome-da-feature
+```
+
+---
+
+## Verificar Branch Atual
+
+```bash
+git branch
+```
+
+---
+
+## Verificar Status dos Arquivos
+
+```bash
+git status
+```
+
+---
+
+## Adicionar Alterações
+
+```bash
+git add .
+```
+
+---
+
+## Criar Commit
+
+```bash
+git commit -m "feat: descrição da funcionalidade"
+```
+
+---
+
+## Enviar Branch para o GitHub
+
+```bash
+git push origin feature/nome-da-feature
+```
+
+---
+
+## Trocar para Main
+
+```bash
+git checkout main
+```
+
+---
+
+## Atualizar Main
+
+```bash
+git pull origin main
+```
+
+---
+
+## Listar Branches
+
+```bash
+git branch -a
+```
+
+---
+
+## Excluir Branch Local
+
+```bash
+git branch -d feature/nome-da-feature
+```
+
+---
+
+# Fluxo de Trabalho
+
+```text
+Issue
+  ↓
+Criar Branch
+  ↓
+Desenvolvimento
+  ↓
+Commit
+  ↓
+Push
+  ↓
+Pull Request
+  ↓
+Code Review
+  ↓
+Merge
 ```
