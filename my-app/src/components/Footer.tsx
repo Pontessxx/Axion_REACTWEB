@@ -13,15 +13,13 @@ export default function Footer() {
 
         <div className="footer__brand">
           <h3>AXION TECH</h3>
-          <p>
-            Gestão inteligente para empresas modernas.
-          </p>
+          
         </div>
 
         <div className="footer__links">
-          <a href="#">Dashboard</a>
-          <a href="#">Financeiro</a>
-          <a href="#">Chat IA</a>
+          <p>
+             © {new Date().getFullYear()} AXION TECH. Todos os direitos reservados.
+          </p>
         </div>
 
         <div className="footer__social">
@@ -33,16 +31,10 @@ export default function Footer() {
             <FaLinkedin />
           </a>
 
-          {/* <a href="#">
-            <FaInstagram />
-          </a> */}
         </div>
 
       </div>
 
-      {/* <div className="footer__bottom">
-        © {new Date().getFullYear()} AXION TECH. Todos os direitos reservados.
-      </div> */}
     </footer>
   );
 }

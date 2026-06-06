@@ -4,6 +4,7 @@ import { ROUTES } from '@/routes/routeConfig';
 import logo from '@/assets/logo.png';
 
 import {
+  FaHome,
   FaFolderOpen,
   FaMoneyBillWave,
   FaRobot,
@@ -22,6 +23,14 @@ export default function Sidebar() {
 
       <nav className="sidebar__menu">
         <NavLink
+          to={ROUTES.HOME}
+          className="sidebar__item"
+        >
+          <FaHome />
+          <span>Home</span>
+        </NavLink>
+
+        <NavLink
           to={ROUTES.PROJECTS}
           className="sidebar__item"
         >
@@ -38,11 +47,11 @@ export default function Sidebar() {
         </NavLink>
 
         <NavLink
-          to={ROUTES.CHAT}
+          to={ROUTES.ABOUT}
           className="sidebar__item"
         >
           <FaRobot />
-          <span>Chat IA</span>
+          <span>Sobre nós</span>
         </NavLink>
 
         <NavLink

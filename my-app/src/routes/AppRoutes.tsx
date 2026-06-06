@@ -4,7 +4,7 @@ import MainLayout from '@/layout/MainLayout';
 
 import Home from '@/pages/Home';
 import NotFound from '@/pages/NotFound';
-import Chat from '@/pages/Chat';
+import About from '@/pages/About';
 import Finance from '@/pages/Finance';
 import Projects from '@/pages/Projects';
 import Profile from '@/pages/Profile';
@@ -20,7 +20,7 @@ export default function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/finance" element={<Finance />} />
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/about" element={<About />} />
           <Route path='/history-chat' element={<Historychat />} />
           <Route path='/profile' element={<Profile />} />
 

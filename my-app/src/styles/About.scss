@@ -1,0 +1,98 @@
+.about {
+  padding: 6rem 10%;
+  color: var(--text-h);
+  background: var(--bg);
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* HERO */
+.about__hero {
+  max-width: 900px;
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+    color: var(--text-h);
+  }
+
+  .about__subtitle {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  .about__description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text);
+  }
+}
+
+/* SECTIONS */
+.about__section {
+  max-width: 800px;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 4px;
+      height: 70%;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* FINAL SECTION */
+.about__closing {
+  max-width: 800px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(170, 59, 255, 0.05);
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.8;
+    color: var(--text);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .about__hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .about__hero .about__subtitle {
+    font-size: 1.2rem;
+  }
+}
