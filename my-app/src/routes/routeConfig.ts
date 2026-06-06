@@ -1,6 +1,8 @@
 export const ROUTES = {
   LOGIN: '/',
-  DASHBOARD: '/dashboard',
+  PROJECTS: '/projects',
   FINANCE: '/finance',
   CHAT: '/chat',
+  HISTORYCHAT: '/history-chat',
+  PROFILE: '/profile',
 };

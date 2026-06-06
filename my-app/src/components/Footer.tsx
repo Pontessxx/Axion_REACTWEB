@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__social">
-          <a href="#">
+          <a href="https://github.com/Pontessxx/Axion_REACTWEB">
             <FaGithub />
           </a>
 
@@ -33,16 +33,16 @@ export default function Footer() {
             <FaLinkedin />
           </a>
 
-          <a href="#">
+          {/* <a href="#">
             <FaInstagram />
-          </a>
+          </a> */}
         </div>
 
       </div>
 
-      <div className="footer__bottom">
+      {/* <div className="footer__bottom">
         © {new Date().getFullYear()} AXION TECH. Todos os direitos reservados.
-      </div>
+      </div> */}
     </footer>
   );
 }

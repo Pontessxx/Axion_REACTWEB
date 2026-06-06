@@ -4,6 +4,11 @@ import MainLayout from '@/layout/MainLayout';
 
 import Home from '@/pages/Home';
 import NotFound from '@/pages/NotFound';
+import Chat from '@/pages/Chat';
+import Finance from '@/pages/Finance';
+import Projects from '@/pages/Projects';
+import Profile from '@/pages/Profile';
+import Historychat from '@/pages/Historychat';
 
 export default function AppRoutes() {
   return (
@@ -13,10 +18,15 @@ export default function AppRoutes() {
         <Route element={<MainLayout />}>
 
           <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/finance" element={<Finance />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path='/history-chat' element={<Historychat />} />
+          <Route path='/profile' element={<Profile />} />
+
+          <Route path="*" element={<NotFound />} />
 
         </Route>
-
-        <Route path="*" element={<NotFound />} />
 
       </Routes>
     </BrowserRouter>

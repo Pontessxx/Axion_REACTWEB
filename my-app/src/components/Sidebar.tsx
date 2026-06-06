@@ -4,26 +4,29 @@ import { ROUTES } from '@/routes/routeConfig';
 import logo from '@/assets/logo.png';
 
 import {
-  FaChartLine,
+  FaFolderOpen,
   FaMoneyBillWave,
   FaRobot,
+  FaHistory,
+  FaUserCircle,
 } from 'react-icons/fa';
 
 export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar__logo">
-        <img src={logo} alt="Logo" />
+        <NavLink to="/">
+          <img src={logo} alt="Logo" />
+        </NavLink>
       </div>
 
       <nav className="sidebar__menu">
-
         <NavLink
-          to={ROUTES.DASHBOARD}
+          to={ROUTES.PROJECTS}
           className="sidebar__item"
         >
-          <FaChartLine />
-          <span>Dashboard</span>
+          <FaFolderOpen />
+          <span>Projetos</span>
         </NavLink>
 
         <NavLink
@@ -42,7 +45,22 @@ export default function Sidebar() {
           <span>Chat IA</span>
         </NavLink>
 
+        <NavLink
+          to={ROUTES.HISTORYCHAT}
+          className="sidebar__item"
+        >
+          <FaHistory />
+          <span>Histórico</span>
+        </NavLink>
       </nav>
+
+        <NavLink
+          to={ROUTES.PROFILE}
+          className="sidebar__item"
+        >
+          <FaUserCircle />
+          <span>Perfil</span>
+        </NavLink>
     </aside>
   );
 }
