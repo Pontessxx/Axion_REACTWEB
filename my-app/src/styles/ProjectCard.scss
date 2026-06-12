@@ -4,6 +4,8 @@
   overflow: hidden;
   background: var(--bg);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
   transition:
     box-shadow 0.2s ease,
     transform 0.2s ease,
@@ -16,23 +18,28 @@
   }
 
   &__preview {
-    height: 140px;
-    background: var(--bg);
+    flex: 1;
+    min-height: 110px;
   }
 
   &__info {
     padding: 1rem 1.25rem 1.25rem;
-    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 
   &__name {
+    display: block;
+    width: 100%;
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-h);
-    margin-bottom: 0.4rem;
   }
 
   &__description {
+    display: block;
+    width: 100%;
     font-size: 0.85rem;
     color: var(--text);
     line-height: 1.5;
