@@ -1,0 +1,40 @@
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg);
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-border);
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+  }
+
+  &__preview {
+    height: 140px;
+    background: var(--bg);
+  }
+
+  &__info {
+    padding: 1rem 1.25rem 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  &__name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-h);
+    margin-bottom: 0.4rem;
+  }
+
+  &__description {
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+}
