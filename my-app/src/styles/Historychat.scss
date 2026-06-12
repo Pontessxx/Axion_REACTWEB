@@ -1,0 +1,91 @@
+.historychat {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.historychat__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-h);
+  text-align: center;
+}
+
+.historychat__search {
+  width: 100%;
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 48px;
+    padding: 0 3rem 0 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--text-h);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &::placeholder {
+      color: var(--text);
+    }
+
+    &:focus {
+      border-color: var(--accent);
+      background: var(--bg);
+    }
+  }
+
+  .historychat__search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text);
+    font-size: 1.1rem;
+    pointer-events: none;
+  }
+}
+
+.historychat__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historychat__item {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-border);
+    background: var(--accent-bg);
+    color: var(--accent);
+  }
+}
+
+.historychat__empty {
+  text-align: center;
+  color: var(--text);
+  font-size: 1rem;
+  padding: 3rem 0;
+}
