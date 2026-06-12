@@ -3,7 +3,6 @@ import '@/styles/Footer.scss';
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagram,
 } from 'react-icons/fa';
 
 export default function Footer() {
