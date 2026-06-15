@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PlanCard from './Plancard';
 import type { Plan } from './Plancard';
 
 interface UpgradePageProps {
