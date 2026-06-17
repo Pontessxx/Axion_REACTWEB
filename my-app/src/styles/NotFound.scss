@@ -1,9 +1,13 @@
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1{
-        font-size: 2rem;
-        padding: 1rem;
-    }
+.notfound {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--text-h);
+    text-align: center;
+  }
 }

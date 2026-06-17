@@ -1,4 +1,3 @@
-
 const Historychat = () => {
   return (
     <div>Historychat</div>
