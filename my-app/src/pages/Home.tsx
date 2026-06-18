@@ -1,6 +1,11 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '@/styles/Home.scss';
 
 const Home = () => {
+  const [input, setInput] = useState('');
+  const navigate = useNavigate();
+
   const getGreeting = (): string => {
     const currentHour = new Date().getHours();
 
@@ -13,6 +18,19 @@ const Home = () => {
     }
 
     return 'Boa noite';
+  };
+
+  const handleSend = () => {
+    const text = input.trim();
+    if (!text) return;
+
+    navigate('/chat', { state: { firstMessage: text } });
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSend();
+    }
   };
 
   return (
@@ -31,12 +49,17 @@ const Home = () => {
             type="text"
             className="home__input"
             placeholder="Ask anything..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
 
           <button
             type="button"
             className="home__button"
             id="start-conversation-button"
+            onClick={handleSend}
+            disabled={!input.trim()}
           >
             Send
           </button>

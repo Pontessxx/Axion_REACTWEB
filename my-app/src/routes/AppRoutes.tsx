@@ -9,6 +9,7 @@ import Finance from '@/pages/Finance';
 import Projects from '@/pages/Projects';
 import Profile from '@/pages/Profile';
 import Historychat from '@/pages/Historychat';
+import Chat from '@/pages/Chat';
 
 export default function AppRoutes() {
   return (
@@ -23,6 +24,7 @@ export default function AppRoutes() {
           <Route path="/about" element={<About />} />
           <Route path='/history-chat' element={<Historychat />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path="/chat" element={<Chat />} />
 
           <Route path="*" element={<NotFound />} />
 
